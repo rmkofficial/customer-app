@@ -1,14 +1,7 @@
-import { useState } from "react";
 import CustomerItem from "./CustomerItem";
 import "./CustomerList.css";
 
-const CustomerList = () => {
-  const [customers, setCustomers] = useState([]);
-
-  const addNewCustomer = (newCustomer) => {
-    setCustomers([...customers, newCustomer]);
-  };
-
+const CustomerList = ({ customers }) => {
   return (
     <ul className="customer-list">
       {customers.map((customer) => (
