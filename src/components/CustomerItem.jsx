@@ -1,4 +1,4 @@
-function CustomerItem() {
+function CustomerItem({ customer }) {
   return (
     <li className="customer-item">
       <div className="customer-info">
@@ -7,7 +7,7 @@ function CustomerItem() {
           className="customer-avatar"
           alt=""
         />
-        <span className="customer-name">Ramazan Mert Kaya</span>
+        <span className="customer-name">{customer.customerName}</span>
       </div>
       <button className="delete-button">
         <i className="bi bi-trash3"></i>
